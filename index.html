@@ -8,56 +8,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/reset.css">
-    <link rel="stylesheet" href="./assets/style.css">
-
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+    <link rel="stylesheet" href="assets/style.css">
 
 </head>
 
 <body>
     <!-- logo -->
     <header>
-        <a href="index.html"><img src="assets/images/logo/ohmyfood.png" alt="logo ohmyfood" class="logo-site"></a>
-        <p><i class="fas fa-map-marker-alt"></i> Paris, Belleville</p>
+        <div class="header_logo">
+            <a href="index.html" class="logo">
+                <h1 class=" titre">ohmyfood</h1>
+            </a>
+        </div>
+        <div class="header_localisation">
+            <p><i class="fas fa-map-marker-alt"></i> Paris, Belleville</p>
+        </div>
     </header>
 
     <!-- Homepage booking and explore -->
-    <section class="Homepage__booking-and-explore">
+    <section id="homepage__booking-and-explore">
         <h2 class="titre-section">Réservez le menu qui vous convient</h2>
-        <p class="------">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-        <button class="------">Explorer nos restaurants</button>
+        <p>Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+        <a href="#" class="btn">Explorer nos restaurants</a>
     </section>
 
     <!-- Fonctioning section -->
-    <section class="homepage__functioning-container">
+    <section id="homepage__functioning-container">
         <h2 class="titre-section">Fonctionnement</h2>
         <div class="section-fonctionnement__etapes">
-            <div class="fonctionnement-card">
-                <span class="fonctionnement-card__number">1</span>
-                <i class="fa-solid fa-mobile-screen-button"></i>
-                <p class="fonctionnement-card__text">Choisissez un restaurant</p>
-            </div>
-            <div class="fonctionnement-card">
-                <span class="fonctionnement-card__number">2</span>
-                <i class="fa-solid fa-list-ul"></i>
-                <p class="fonctionnement-card__text">Composez votre menu</p>
-            </div>
-            <div class="fonctionnement-card">
-                <span class="fonctionnement-card__number">3</span>
-                <i class="fa-solid fa-store"></i>
-                <p class="fonctionnement-card__text">Dégustez au restaurant</p>
-            </div>
+            <a href="#">
+                <div class="fonctionnement-card">
+                    <span class="fonctionnement-card__number">1</span>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <p class="fonctionnement-card__text">Choisissez un restaurant</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="fonctionnement-card">
+                    <span class="fonctionnement-card__number">2</span>
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p class="fonctionnement-card__text">Composez votre menu</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="fonctionnement-card">
+                    <span class="fonctionnement-card__number">3</span>
+                    <i class="fa-solid fa-store"></i>
+                    <p class="fonctionnement-card__text">Dégustez au restaurant</p>
+                </div>
+            </a>
         </div>
-
-
     </section>
 
     <!-- Restaurants section -->
-    <section class="homepage__restaurants-container">
+    <section id="homepage__restaurants-container">
         <!-- Restaurants CARD 1 -->
         <div class="homepage__restaurants-cards">
 
@@ -71,6 +80,7 @@
                     <h3 class="card-title">La palette du goût</h3>
                     <p class="card-subtitle">Ménilmontant</p>
                     <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
                 </div>
             </article>
 

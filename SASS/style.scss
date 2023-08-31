@@ -1,10 +1,41 @@
+@import "reset.scss";
+@import "index.scss";
+
+
 :root {
     --primaire-color: #9356DC;
     --secondaire-color: #FF79DA;
+    --primaire-light-color: rgb(176, 116, 225);
+    --secondaire-light-color: rgb(228, 132, 224);
     --tertiaire-color: #99E2D0;
+
+    --grey-tiny: #7E7E7E;
+    --grey-2: #EAEAEA;
+    --grey-dark: #353535;
+    --grey-bkg: #f6f6f6;
+    --black-bkg: #141414;
+
+    --box-shadox-card: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+
+    --gradient-normal: linear-gradient(var(--secondaire-color), var(--primaire-color));
+    --gradient-hover: linear-gradient(var(--primaire-light-color), var(--secondaire-light-color));
 }
 
+header {
+    display: flex;
+    flex-direction: column;
 
-.card-content img {
-    height: 400px;
+    .header_logo {
+        padding: 14px 0 13px 0;
+        display: flex;
+        justify-content: center;
+        z-index: 3;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+        color: var(--black-bkg);
+        font-size: 1.9rem;
+        font-family: "Shrikhand", sans-serif;
+    }
 }
