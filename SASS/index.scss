@@ -7,7 +7,6 @@
 }
 
 section {
-    text-align: center;
     background-color: #f8f8f8;
     padding: 30px;
 }
@@ -17,9 +16,10 @@ body,
     font-family: 'Roboto', sans-serif;
 }
 
-// Homepage booking and explore
+// booking and explore section
 #homepage__booking-and-explore {
     height: 10rem;
+    text-align: center;
 
     h2 {
         font-size: 24px;
@@ -124,11 +124,19 @@ body,
 //Restaurants section
 #homepage__restaurants-container {
 
+    h2 {
+        padding-bottom: 20px;
+    }
 
-    .card-content {
+    .homepage__restaurants-cards {
         box-shadow: 2px 1px 10px -5px black;
         border-radius: 10px;
         position: relative;
+
+
+        .card-content {
+            margin-bottom: 30px;
+        }
 
         & .restaurant__card-new {
             position: absolute;
@@ -154,6 +162,41 @@ body,
             padding: 16px;
             position: relative;
         }
-    }
 
+        // animation coeur
+        .card-heart {
+            cursor: pointer;
+            font-size: 1.5rem;
+            position: relative;
+
+            .fa-regular {
+                position: absolute;
+                opacity: 1;
+                color: var(--grey-dark);
+                transition: all;
+                transition: opacity 0.5s ease-in;
+            }
+
+            .fa-solid {
+                position: absolute;
+                opacity: 0;
+                background: var(--gradient-hover);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all;
+                transition: opacity 0.5s ease-in;
+            }
+
+            &:hover {
+                & .fa-regular {
+                    opacity: 0;
+                }
+
+                & .fa-solid {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 }
