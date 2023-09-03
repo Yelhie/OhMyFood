@@ -1,0 +1,20 @@
+.news-icon {
+    animation: card-new-animation 3s ease 0s infinite alternate none;
+}
+
+
+@keyframes card-new-animation {
+
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

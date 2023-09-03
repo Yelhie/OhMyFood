@@ -1,0 +1,33 @@
+.heart-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    .fa-regular {
+        position: absolute;
+        opacity: 1;
+        color: var(--grey-dark);
+        transition: all;
+        transition: opacity 0.5s ease-in;
+    }
+
+    .fa-solid {
+        position: absolute;
+        opacity: 0;
+        background: var(--gradient-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all;
+        transition: opacity 0.5s ease-in;
+    }
+
+    &:hover {
+        & .fa-regular {
+            opacity: 0;
+        }
+
+        & .fa-solid {
+            opacity: 1;
+        }
+    }
+}
