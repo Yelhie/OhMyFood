@@ -1,0 +1,88 @@
+// Nouveautés animation
+.news-icon {
+    animation: card_new_animation 3s ease 0s infinite alternate none;
+}
+
+@keyframes card_new_animation {
+
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+// Heart Animation
+.heart-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
+
+    .fa-regular {
+        position: absolute;
+        opacity: 1;
+        color: var(--grey-dark);
+        transition: all;
+        transition: opacity 0.5s ease-in;
+    }
+
+    .fa-solid {
+        position: absolute;
+        opacity: 0;
+        background: var(--gradient-hover);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all;
+        transition: opacity 0.5s ease-in;
+    }
+
+    &:hover {
+        & .fa-regular {
+            opacity: 0;
+        }
+
+        & .fa-solid {
+            opacity: 1;
+        }
+    }
+}
+
+// loader Animation
+.loader {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    position: relative;
+    background: var(--white);
+    box-shadow: -24px 0 var(--white), 24px 0 var(--white);
+    box-sizing: border-box;
+    animation: animation_loader 3s linear infinite;
+}
+
+@keyframes animation_loader {
+    33% {
+        background: var(--with);
+        box-shadow: -24px 0 var(--primaire-color), 24px 0 var(--white);
+    }
+
+    66% {
+        background: var(--secondaire-color);
+        box-shadow: -24px 0 var(--white), 24px 0 var(--white);
+    }
+
+    100% {
+        background: var(--white);
+        box-shadow: -24px 0 var(--white), 24px 0 var(--primaire-color);
+        ;
+    }
+}

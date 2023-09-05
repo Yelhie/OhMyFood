@@ -1,3 +1,6 @@
+@import "reset.scss";
+@import "style.scss";
+
 .header_localisation {
     background-color: var(--grey-2);
     font-size: 1rem;
@@ -17,6 +20,11 @@ body,
     font-family: 'Roboto', sans-serif;
 }
 
+
+body {
+    background-color: white;
+}
+
 // booking and explore section
 #homepage__booking-and-explore {
     height: 10rem;
@@ -32,22 +40,6 @@ body,
         font-size: 18px;
         padding-bottom: 48px;
         color: var(--grey-tiny);
-    }
-
-    .btn {
-        font-size: 1rem;
-        background-image: var(--gradient-normal);
-        border: none;
-        color: white;
-        border-radius: 2rem;
-        box-shadow: 0px 2px 10px -3px black;
-        padding: 1rem 1.5rem;
-
-        &:hover {
-            transition-duration: 0.5s;
-            box-shadow: 0px 2px 15px -3px black;
-            background-image: var(--gradient-hover);
-        }
     }
 }
 
@@ -136,6 +128,7 @@ body,
 
 //Restaurants section
 #homepage__restaurants-container {
+
 
     h2 {
         padding-bottom: 20px;

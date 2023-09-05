@@ -1,13 +1,141 @@
-.news-icon {
-  animation: card-new-animation 3s ease 0s infinite alternate none;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+input,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
 }
 
-@keyframes card-new-animation {
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+
+.news-icon {
+  animation: card_new_animation 3s ease 0s infinite alternate none;
+}
+
+@keyframes card_new_animation {
   0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -41,6 +169,33 @@
   opacity: 1;
 }
 
+.loader {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  background: var(--white);
+  box-shadow: -24px 0 var(--white), 24px 0 var(--white);
+  box-sizing: border-box;
+  animation: animation_loader 3s linear infinite;
+}
+
+@keyframes animation_loader {
+  33% {
+    background: var(--with);
+    box-shadow: -24px 0 var(--primaire-color), 24px 0 var(--white);
+  }
+  66% {
+    background: var(--secondaire-color);
+    box-shadow: -24px 0 var(--white), 24px 0 var(--white);
+  }
+  100% {
+    background: var(--white);
+    box-shadow: -24px 0 var(--white), 24px 0 var(--primaire-color);
+  }
+}
 :root {
   --primaire-color: #9356DC;
   --secondaire-color: #FF79DA;
@@ -52,6 +207,7 @@
   --grey-dark: #353535;
   --grey-bkg: #f6f6f6;
   --black: #000000;
+  --white: #ffffff;
   --box-shadox-card: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   --gradient-normal: linear-gradient(var(--secondaire-color), var(--primaire-color));
   --gradient-hover: linear-gradient(var(--secondaire-light-color), var(--primaire-light-color));
@@ -130,4 +286,26 @@ footer i {
   background-image: var(--gradient-hover);
 }
 
-/*# sourceMappingURL=style.css.map */
+.section_entrees {
+  display: flex;
+  flex-direction: column;
+}
+
+.plat {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 1px 16px -4px var(--grey-tiny);
+  border-radius: 20px;
+  margin: 10px 50px;
+  padding: 10px 10px;
+}
+
+img {
+  width: 500px;
+}
+
+.btn_commander {
+  display: flex;
+}
+
+/*# sourceMappingURL=restaurants.css.map */

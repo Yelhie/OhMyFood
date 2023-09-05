@@ -1,0 +1,28 @@
+@import "reset.scss";
+@import "style.scss";
+
+
+
+.section_entrees {
+    display: flex;
+    flex-direction: column;
+}
+
+.plat {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 16px -4px var(--grey-tiny);
+    border-radius: 20px;
+    margin: 10px 50px;
+    padding: 10px 10px;
+}
+
+
+img {
+    width: 500px;
+}
+
+
+.btn_commander {
+    display: flex;
+}
