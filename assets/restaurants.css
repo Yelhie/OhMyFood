@@ -169,33 +169,49 @@ audio:not([controls]),
   opacity: 1;
 }
 
-.loader {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  display: block;
-  margin: 15px auto;
-  position: relative;
-  background: var(--white);
-  box-shadow: -24px 0 var(--white), 24px 0 var(--white);
-  box-sizing: border-box;
-  animation: animation_loader 3s linear infinite;
+.loader-contener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  animation: loader_transition_animation linear 3s forwards;
+}
+@keyframes loader_transition_animation {
+  100% {
+    visibility: hidden;
+  }
 }
 
-@keyframes animation_loader {
-  33% {
-    background: var(--with);
-    box-shadow: -24px 0 var(--primaire-color), 24px 0 var(--white);
-  }
-  66% {
-    background: var(--secondaire-color);
-    box-shadow: -24px 0 var(--white), 24px 0 var(--white);
+.loader {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  border-color: var(--primaire-color) transparent var(--secondaire-color) transparent;
+  animation: loader_animation 1.2s linear infinite;
+}
+@keyframes loader_animation {
+  0% {
+    transform: rotate(0deg);
   }
   100% {
-    background: var(--white);
-    box-shadow: -24px 0 var(--white), 24px 0 var(--primaire-color);
+    transform: rotate(360deg);
   }
 }
+
 :root {
   --primaire-color: #9356DC;
   --secondaire-color: #FF79DA;
@@ -255,6 +271,7 @@ footer i {
 }
 @media (min-width: 1024px) {
   footer {
+    padding-top: 50px;
     flex-direction: row;
     justify-content: flex-end;
     gap: 2.5rem;
@@ -286,26 +303,100 @@ footer i {
   background-image: var(--gradient-hover);
 }
 
-.section_entrees {
-  display: flex;
-  flex-direction: column;
+header i {
+  position: absolute;
+  left: 32px;
+  top: 25px;
+  font-size: 24px;
+  color: var(--black);
+}
+header .header_banner {
+  height: 200px;
+}
+header img {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  position: absolute;
 }
 
-.plat {
+.menu_contener {
+  position: relative;
+  border-radius: 30px 30px 0 0;
+  background-color: var(--grey-bkg);
+  padding: 30px 15px 5px 15px;
+}
+@media (min-width: 1024px) {
+  .menu_contener {
+    width: 900px;
+    margin: 0 auto 0 auto;
+  }
+}
+.menu_contener .menu_title {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-start;
+}
+@media (min-width: 1024px) {
+  .menu_contener .menu_title {
+    justify-content: center;
+  }
+}
+.menu_contener .menu_title h1 {
+  font-size: 2rem;
+  font-family: "Shrikhand", sans-serif;
+  padding-bottom: 30px;
+}
+.menu_contener .menu_title .heart-icon {
+  margin: 10px;
+}
+.menu_contener .liste-plats {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.menu_contener .liste-plats .line {
+  height: 0.25rem;
+  width: 3.25rem;
+  background-color: #99e2d0;
+}
+.menu_contener .liste-plats .plat {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
   box-shadow: 0px 1px 16px -4px var(--grey-tiny);
-  border-radius: 20px;
-  margin: 10px 50px;
-  padding: 10px 10px;
+  border-radius: 0.9rem;
+  margin: 20px 0px;
+  overflow: hidden;
 }
-
-img {
-  width: 500px;
+.menu_contener .liste-plats .plat:hover .plat-check {
+  transform: translateX(-70px);
 }
-
-.btn_commander {
+.menu_contener .liste-plats .plat:hover .plat-prix {
+  padding-right: 85px;
+}
+.menu_contener .liste-plats .plat .plat-texte {
+  padding: 15px;
+}
+.menu_contener .liste-plats .plat .plat-prix {
   display: flex;
+  margin-left: auto;
+  padding: 40px 15px 15px 0;
+  font-size: 0.9rem;
+  transition: 0.3s ease-in-out;
+}
+.menu_contener .liste-plats .plat .plat-check {
+  display: grid;
+  place-items: center;
+  margin-right: -70px;
+  color: var(--white);
+  background-color: var(--tertiaire-color);
+  width: 70px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+.menu_contener .btn_commander {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 40px;
 }
 
 /*# sourceMappingURL=restaurants.css.map */

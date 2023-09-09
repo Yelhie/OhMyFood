@@ -127,15 +127,15 @@ audio:not([controls]),
 }
 
 .news-icon {
-  animation: card-new-animation 3s ease 0s infinite alternate none;
+  animation: card_new_animation 3s ease 0s infinite alternate none;
 }
 
-@keyframes card-new-animation {
+@keyframes card_new_animation {
   0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -169,6 +169,49 @@ audio:not([controls]),
   opacity: 1;
 }
 
+.loader-contener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  animation: loader_transition_animation linear 3s forwards;
+}
+@keyframes loader_transition_animation {
+  100% {
+    visibility: hidden;
+  }
+}
+
+.loader {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  border-color: var(--primaire-color) transparent var(--secondaire-color) transparent;
+  animation: loader_animation 1.2s linear infinite;
+}
+@keyframes loader_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 :root {
   --primaire-color: #9356DC;
   --secondaire-color: #FF79DA;
@@ -180,6 +223,7 @@ audio:not([controls]),
   --grey-dark: #353535;
   --grey-bkg: #f6f6f6;
   --black: #000000;
+  --white: #ffffff;
   --box-shadox-card: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   --gradient-normal: linear-gradient(var(--secondaire-color), var(--primaire-color));
   --gradient-hover: linear-gradient(var(--secondaire-light-color), var(--primaire-light-color));
@@ -227,6 +271,7 @@ footer i {
 }
 @media (min-width: 1024px) {
   footer {
+    padding-top: 50px;
     flex-direction: row;
     justify-content: flex-end;
     gap: 2.5rem;
@@ -281,7 +326,6 @@ body {
 }
 
 #homepage__booking-and-explore {
-  height: 10rem;
   text-align: center;
 }
 #homepage__booking-and-explore h2 {
@@ -293,6 +337,9 @@ body {
   font-size: 18px;
   padding-bottom: 48px;
   color: var(--grey-tiny);
+}
+#homepage__booking-and-explore .btn {
+  display: inline-block;
 }
 
 #homepage__functioning-container {

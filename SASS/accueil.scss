@@ -12,7 +12,7 @@
 
 section {
     background-color: #f8f8f8;
-    padding: 30px;
+    padding: 30px; //
 }
 
 body,
@@ -27,7 +27,7 @@ body {
 
 // booking and explore section
 #homepage__booking-and-explore {
-    height: 10rem;
+    //height: 10rem;
     text-align: center;
 
     h2 {
@@ -40,6 +40,10 @@ body {
         font-size: 18px;
         padding-bottom: 48px;
         color: var(--grey-tiny);
+    }
+
+    .btn {
+        display: inline-block;
     }
 }
 

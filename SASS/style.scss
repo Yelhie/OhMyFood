@@ -21,7 +21,6 @@
     --gradient-hover: linear-gradient(var(--secondaire-light-color), var(--primaire-light-color));
 }
 
-
 header {
     display: flex;
     flex-direction: column;
@@ -69,7 +68,7 @@ footer {
     }
 
     @media (min-width: 1024px) {
-
+        padding-top: 50px;
         flex-direction: row;
         justify-content: flex-end;
         gap: 2.5rem;
