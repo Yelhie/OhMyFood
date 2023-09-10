@@ -63,7 +63,6 @@ button {
   outline: 0;
   font-weight: inherit;
   font-style: inherit;
-  font-family: inherit;
   vertical-align: baseline;
 }
 
@@ -178,7 +177,7 @@ audio:not([controls]),
   height: 100%;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
-  animation: loader_transition_animation linear 3s forwards;
+  animation: loader_transition_animation linear 2s forwards;
 }
 @keyframes loader_transition_animation {
   100% {
@@ -201,7 +200,7 @@ audio:not([controls]),
   border-radius: 50%;
   border: 6px solid var(--white);
   border-color: var(--primaire-color) transparent var(--secondaire-color) transparent;
-  animation: loader_animation 1.2s linear infinite;
+  animation: loader_animation 1s linear infinite;
 }
 @keyframes loader_animation {
   0% {
@@ -212,6 +211,14 @@ audio:not([controls]),
   }
 }
 
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 :root {
   --primaire-color: #9356DC;
   --secondaire-color: #FF79DA;
@@ -257,13 +264,16 @@ footer h2 {
   font-family: "Shrikhand", sans-serif;
   padding-bottom: 10px;
 }
-footer i {
-  padding-right: 8px;
-}
 footer ul {
   display: flex;
   flex-direction: column;
   padding: 4px 0;
+}
+footer i {
+  padding-right: 8px;
+}
+footer a {
+  font-weight: 500;
 }
 footer a,
 footer i {
@@ -320,6 +330,10 @@ header img {
   position: absolute;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .menu_contener {
   position: relative;
   border-radius: 30px 30px 0 0;
@@ -330,15 +344,19 @@ header img {
   .menu_contener {
     width: 900px;
     margin: 0 auto 0 auto;
+    padding: 30px 150px 5px 150px;
   }
 }
 .menu_contener .menu_title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 @media (min-width: 1024px) {
   .menu_contener .menu_title {
     justify-content: center;
+  }
+  .menu_contener .menu_title .heart-icon {
+    margin-left: 10px;
   }
 }
 .menu_contener .menu_title h1 {
@@ -347,11 +365,26 @@ header img {
   padding-bottom: 30px;
 }
 .menu_contener .menu_title .heart-icon {
-  margin: 10px;
+  padding: 12px 30px 0 0;
 }
 .menu_contener .liste-plats {
   display: grid;
   grid-template-columns: 1fr;
+}
+.menu_contener .liste-plats h2 {
+  font-weight: 300;
+}
+.menu_contener .liste-plats section {
+  opacity: 0;
+}
+.menu_contener .liste-plats section:nth-child(1) {
+  animation: apparition 0.5s ease-in-out forwards;
+}
+.menu_contener .liste-plats section:nth-child(2) {
+  animation: apparition 0.5s ease-in-out 1s forwards;
+}
+.menu_contener .liste-plats section:nth-child(3) {
+  animation: apparition 0.5s ease-in-out 2s forwards;
 }
 .menu_contener .liste-plats .line {
   height: 0.25rem;
@@ -376,7 +409,14 @@ header img {
 .menu_contener .liste-plats .plat .plat-texte {
   padding: 15px;
 }
+.menu_contener .liste-plats .plat .plat-texte h3 {
+  font-weight: 500;
+}
+.menu_contener .liste-plats .plat .plat-texte p {
+  font-weight: 300;
+}
 .menu_contener .liste-plats .plat .plat-prix {
+  font-weight: 500;
   display: flex;
   margin-left: auto;
   padding: 40px 15px 15px 0;

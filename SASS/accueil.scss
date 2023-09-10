@@ -15,8 +15,7 @@ section {
     padding: 30px; //
 }
 
-body,
-.header_localisation {
+body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -65,19 +64,14 @@ body {
         text-align: left;
     }
 
-    i {
-        color: var(--gradient-normal);
-        padding-left: 4px;
-    }
-
-    .section-fonctionnement__etapes {
+    .section-fonctionnement {
         display: grid;
         grid-template-columns: 1fr;
         gap: 24px;
     }
 
     @media (min-width: 1024px) {
-        .section-fonctionnement__etapes {
+        .section-fonctionnement {
             grid-template-columns: repeat(3, 1fr);
         }
     }
@@ -124,16 +118,20 @@ body {
         }
     }
 
+    i {
+        color: var(--gradient-normal);
+        padding-left: 4px;
+    }
+
     p {
         color: var(--black);
+        font-weight: 500;
     }
 }
 
 
 //Restaurants section
 #homepage__restaurants-container {
-
-
     h2 {
         padding-bottom: 20px;
     }
@@ -175,10 +173,15 @@ body {
         }
 
         & .card-txt {
+            font-family: 'Roboto';
             background-color: white;
             color: black;
             border-radius: 0 0 10px 10px;
             padding: 16px;
+        }
+
+        h3 {
+            font-weight: 500;
         }
 
         .heart-icon {

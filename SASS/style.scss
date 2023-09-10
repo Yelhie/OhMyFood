@@ -52,14 +52,19 @@ footer {
         padding-bottom: 10px;
     }
 
-    i {
-        padding-right: 8px;
-    }
-
     ul {
         display: flex;
         flex-direction: column;
         padding: 4px 0;
+    }
+
+
+    i {
+        padding-right: 8px;
+    }
+
+    a {
+        font-weight: 500;
     }
 
     a,

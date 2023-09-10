@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>OhMyFood - Le Delice DesSens</title>
+    <title>OhMyFood - Le Delice Des Sens</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,21 +17,174 @@
 </head>
 
 
-
 <body>
 
-    <!-- logo -->
+    <!-- logo and banner -->
     <header>
         <div class="header_logo">
-            <a href="accueil.html" class="logo">
+            <a href="../accueil.html" class="logo">
+                <i class="fa-solid fa-arrow-left"></i>
                 <h1 class=" titre">ohmyfood</h1>
             </a>
         </div>
-        <div class="header_localisation">
-            <p><i class="fas fa-map-marker-alt"></i> Paris, Belleville</p>
+
+        <div class="header_banner">
+            <img src="../assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="Image d'un plat">
         </div>
     </header>
 
+    <main class="menu_contener">
+        <div class="menu_title">
+            <h1>Le Délice des Sens</h1>
+            <div class="heart-icon">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+        </div>
+
+        <div class="liste-plats">
+
+            <section class="section_entrees">
+                <h2>ENTRÉES</h2>
+                <div class="line"></div>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>25<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p>Et sa farandole de petits légumes</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>35<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Velouté de cèpes</h3>
+                        <p>Aux truffes</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>20<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+            </section>
+
+
+            <section class="section_plats">
+                <h2>PLATS</h2>
+                <div class="line"></div>
+
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Poulet rôti aux herbes de Provence</h3>
+                        <p>Et sa crème de truffe</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>40<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Langouste rôtie</h3>
+                        <p>Et ses légumes de saison</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>35<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Côte de bœuf Angus</h3>
+                        <p>Et sa purée de panais</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>44<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+            </section>
+
+
+            <section class="section_desserts">
+                <h2>DESSERTS</h2>
+                <div class="line"></div>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Farandole de desserts</h3>
+                        <p>Du chef</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>18<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Crème brulée</h3>
+                        <p>Revisitée</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>22<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+
+                <article class="plat">
+                    <div class="plat-texte">
+                        <h3>Tiramisu</h3>
+                        <p>À la noisette</p>
+                    </div>
+                    <div class="plat-prix">
+                        <p>23<span>€</span></p>
+                    </div>
+                    <div class="plat-check">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <div class="btn_commander"><a href="#" class="btn">Commander</a>
+        </div>
+
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -45,5 +198,6 @@
     </footer>
 
 </body>
+
 
 </html>

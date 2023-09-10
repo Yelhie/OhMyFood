@@ -65,7 +65,7 @@
     height: 100%;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.95);
-    animation: loader_transition_animation linear 3s forwards;
+    animation: loader_transition_animation linear 2s forwards;
 
     //suppresion du loader contener
     @keyframes loader_transition_animation {
@@ -90,7 +90,7 @@
     border-radius: 50%;
     border: 6px solid var(--white);
     border-color: var(--primaire-color) transparent var(--secondaire-color) transparent;
-    animation: loader_animation 1.2s linear infinite;
+    animation: loader_animation 1s linear infinite;
 
     @keyframes loader_animation {
         0% {
@@ -100,5 +100,16 @@
         100% {
             transform: rotate(360deg);
         }
+    }
+}
+
+// animation apparition section plats
+@keyframes apparition {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }

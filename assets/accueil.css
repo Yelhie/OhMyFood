@@ -63,7 +63,6 @@ button {
   outline: 0;
   font-weight: inherit;
   font-style: inherit;
-  font-family: inherit;
   vertical-align: baseline;
 }
 
@@ -178,7 +177,7 @@ audio:not([controls]),
   height: 100%;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
-  animation: loader_transition_animation linear 3s forwards;
+  animation: loader_transition_animation linear 2s forwards;
 }
 @keyframes loader_transition_animation {
   100% {
@@ -201,7 +200,7 @@ audio:not([controls]),
   border-radius: 50%;
   border: 6px solid var(--white);
   border-color: var(--primaire-color) transparent var(--secondaire-color) transparent;
-  animation: loader_animation 1.2s linear infinite;
+  animation: loader_animation 1s linear infinite;
 }
 @keyframes loader_animation {
   0% {
@@ -212,6 +211,14 @@ audio:not([controls]),
   }
 }
 
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 :root {
   --primaire-color: #9356DC;
   --secondaire-color: #FF79DA;
@@ -257,13 +264,16 @@ footer h2 {
   font-family: "Shrikhand", sans-serif;
   padding-bottom: 10px;
 }
-footer i {
-  padding-right: 8px;
-}
 footer ul {
   display: flex;
   flex-direction: column;
   padding: 4px 0;
+}
+footer i {
+  padding-right: 8px;
+}
+footer a {
+  font-weight: 500;
 }
 footer a,
 footer i {
@@ -316,8 +326,7 @@ section {
   padding: 30px;
 }
 
-body,
-.header_localisation {
+body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -358,17 +367,13 @@ body {
   font-weight: bold;
   text-align: left;
 }
-#homepage__functioning-container i {
-  color: var(--gradient-normal);
-  padding-left: 4px;
-}
-#homepage__functioning-container .section-fonctionnement__etapes {
+#homepage__functioning-container .section-fonctionnement {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 }
 @media (min-width: 1024px) {
-  #homepage__functioning-container .section-fonctionnement__etapes {
+  #homepage__functioning-container .section-fonctionnement {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -409,8 +414,13 @@ body {
 #homepage__functioning-container .fonctionnement-card:hover i {
   color: var(--primaire-color);
 }
+#homepage__functioning-container i {
+  color: var(--gradient-normal);
+  padding-left: 4px;
+}
 #homepage__functioning-container p {
   color: var(--black);
+  font-weight: 500;
 }
 
 #homepage__restaurants-container h2 {
@@ -450,10 +460,14 @@ body {
   border-radius: 10px 10px 0 0;
 }
 #homepage__restaurants-container .restaurants-cards .card-txt {
+  font-family: "Roboto";
   background-color: white;
   color: black;
   border-radius: 0 0 10px 10px;
   padding: 16px;
+}
+#homepage__restaurants-container .restaurants-cards h3 {
+  font-weight: 500;
 }
 #homepage__restaurants-container .restaurants-cards .heart-icon {
   position: absolute;
