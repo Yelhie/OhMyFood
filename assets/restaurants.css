@@ -368,8 +368,8 @@ body {
   padding: 12px 30px 0 0;
 }
 .menu_contener .liste-plats {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 }
 .menu_contener .liste-plats h2 {
   font-weight: 300;
@@ -408,12 +408,20 @@ body {
 }
 .menu_contener .liste-plats .plat .plat-texte {
   padding: 15px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu_contener .liste-plats .plat .plat-texte h3 {
   font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu_contener .liste-plats .plat .plat-texte p {
   font-weight: 300;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu_contener .liste-plats .plat .plat-prix {
   font-weight: 500;

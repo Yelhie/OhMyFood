@@ -64,8 +64,11 @@ body {
 
 
     .liste-plats {
-        display: grid;
-        grid-template-columns: 1fr;
+        // display: grid;
+        // grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+
 
         h2 {
             font-weight: 300;
@@ -112,13 +115,21 @@ body {
 
             .plat-texte {
                 padding: 15px;
+                overflow: hidden;
+                white-space: nowrap;
 
                 h3 {
                     font-weight: 500;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
 
                 p {
                     font-weight: 300;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
             }
 
