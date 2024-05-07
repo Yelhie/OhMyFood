@@ -1,13 +1,13 @@
 .news-icon {
-  animation: card-new-animation 3s ease 0s infinite alternate none;
+  animation: card_new_animation 3s ease 0s infinite alternate none;
 }
 
-@keyframes card-new-animation {
+@keyframes card_new_animation {
   0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -29,8 +29,7 @@
   opacity: 0;
   background: var(--gradient-hover);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
   transition: all;
   transition: opacity 0.5s ease-in;
 }
@@ -41,20 +40,79 @@
   opacity: 1;
 }
 
+.loader-contener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.95);
+  animation: loader_transition_animation linear 2s forwards;
+}
+@keyframes loader_transition_animation {
+  100% {
+    visibility: hidden;
+  }
+}
+
+.loader {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.loader:after {
+  content: " ";
+  display: block;
+  width: 84px;
+  height: 84px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  border-color: var(--primaire-color) transparent var(--secondaire-color)
+    transparent;
+  animation: loader_animation 1s linear infinite;
+}
+@keyframes loader_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 :root {
-  --primaire-color: #9356DC;
-  --secondaire-color: #FF79DA;
+  --primaire-color: #9356dc;
+  --secondaire-color: #ff79da;
   --primaire-light-color: #9d6bda;
   --secondaire-light-color: #fd95e0;
-  --tertiaire-color: #99E2D0;
-  --grey-tiny: #7E7E7E;
-  --grey-2: #EAEAEA;
+  --tertiaire-color: #99e2d0;
+  --grey-tiny: #7e7e7e;
+  --grey-2: #eaeaea;
   --grey-dark: #353535;
   --grey-bkg: #f6f6f6;
   --black: #000000;
+  --white: #ffffff;
   --box-shadox-card: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-  --gradient-normal: linear-gradient(var(--secondaire-color), var(--primaire-color));
-  --gradient-hover: linear-gradient(var(--secondaire-light-color), var(--primaire-light-color));
+  --gradient-normal: linear-gradient(
+    var(--secondaire-color),
+    var(--primaire-color)
+  );
+  --gradient-hover: linear-gradient(
+    var(--secondaire-light-color),
+    var(--primaire-light-color)
+  );
 }
 
 header {
@@ -85,13 +143,16 @@ footer h2 {
   font-family: "Shrikhand", sans-serif;
   padding-bottom: 10px;
 }
-footer i {
-  padding-right: 8px;
-}
 footer ul {
   display: flex;
   flex-direction: column;
   padding: 4px 0;
+}
+footer i {
+  padding-right: 8px;
+}
+footer a {
+  font-weight: 500;
 }
 footer a,
 footer i {
@@ -99,6 +160,7 @@ footer i {
 }
 @media (min-width: 1024px) {
   footer {
+    padding-top: 50px;
     flex-direction: row;
     justify-content: flex-end;
     gap: 2.5rem;

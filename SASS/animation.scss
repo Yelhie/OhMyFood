@@ -38,8 +38,7 @@
         opacity: 0;
         background: var(--gradient-hover);
         background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: transparent;
         transition: all;
         transition: opacity 0.5s ease-in;
     }
