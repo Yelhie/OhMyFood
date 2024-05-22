@@ -21,8 +21,8 @@ Projet de la formation OpenClassrooms intégrateur web dont voici les objectifs:
 
 **Home page**
 
-![ohMyFood home page](https://github.com/Yelhie/xi5ftcai605u/blob/master/img/ohmyfood_23152726.jpg)
+![ohMyFood home page](https://github.com/Yelhie/OhMyFood/blob/master/screenshot/ohmyfood_23152726.jpg)
 
 **exemple page menu**
 
-![ohMyFood page menu](https://github.com/Yelhie/xi5ftcai605u/blob/master/img/ohmyfood_23152911.jpg)
+![ohMyFood page menu](https://github.com/Yelhie/OhMyFood/blob/master/screenshot/ohmyfood_23152911.jpg)
