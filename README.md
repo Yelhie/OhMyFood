@@ -10,12 +10,12 @@ Projet de la formation OpenClassrooms intégrateur web dont voici les objectifs:
 
 - Lancer le projet avec liveserver
 
-## Stack
+## Stack Technique
 
-**Client:**
-
-- HTML
-- Sass
+|  Backend   | Frontend | Base de données | Documentation API et Test |
+|:----------:|:--------:|:---------------:|:-------------------------:|
+|  |    HTML   |                 |                   |
+|  |    CSS  |               |                     |
 
 ## Screenshots
 
